@@ -24,31 +24,31 @@ primary key (musteriNo),
 );
 
 
-insert into bankaSehir (Sehir) VALUES ('İstanbul')
-insert into bankaSehir (Sehir) VALUES ('İzmir')
-insert into bankaSehir (Sehir) VALUES ('Balıkesir')
+insert into bankaSehir (Sehir) VALUES ('Ãstanbul')
+insert into bankaSehir (Sehir) VALUES ('Ãzmir')
+insert into bankaSehir (Sehir) VALUES ('BalÃ½kesir')
 
 insert into bankaSube (Sube) VALUES ('Pendik')
-insert into bankaSube (Sube) VALUES ('Güzelyalı')
+insert into bankaSube (Sube) VALUES ('GÃ¼zelyalÃ½')
 insert into bankaSube (Sube) VALUES ('Fatih')
 insert into bankaSube (Sube) VALUES ('Susurluk')
 
 insert into calisan (ad,soyad) VALUES ('Ahmet', 'Demir')
-insert into calisan (ad,soyad) VALUES ('Ayşe', 'Yılmaz')
-insert into calisan (ad,soyad) VALUES ('Berat', 'Kıvılcım')
+insert into calisan (ad,soyad) VALUES ('AyÃ¾e', 'YÃ½lmaz')
+insert into calisan (ad,soyad) VALUES ('Berat', 'KÃ½vÃ½lcÃ½m')
 insert into calisan (ad,soyad) VALUES ('Bora', 'Albayrak')
-insert into calisan (ad,soyad) VALUES ('Melisa', 'Çolak')
+insert into calisan (ad,soyad) VALUES ('Melisa', 'Ã‡olak')
 
 
 insert into musteri (ad,soyad) VALUES ('Murat', 'Pala')
-insert into musteri (ad,soyad) VALUES ('Tuğçe', 'Kanberk')
+insert into musteri (ad,soyad) VALUES ('TuÃ°Ã§e', 'Kanberk')
 insert into musteri (ad,soyad) VALUES ('Hatice', 'Karademir')
 insert into musteri (ad,soyad) VALUES ('Asya', 'Aldemir')
 insert into musteri (ad,soyad) VALUES ('Egemen', 'Dur')
-insert into musteri (ad,soyad) VALUES ('Emre', 'Kısa')
-insert into musteri (ad,soyad) VALUES ('Emre', 'Ardıçoğlu')
+insert into musteri (ad,soyad) VALUES ('Emre', 'KÃ½sa')
+insert into musteri (ad,soyad) VALUES ('Emre', 'ArdÃ½Ã§oÃ°lu')
 insert into musteri (ad,soyad) VALUES ('Burak', 'Murat')
-insert into musteri (ad,soyad) VALUES ('Ali', 'Şaban')
+insert into musteri (ad,soyad) VALUES ('Ali', 'Ãaban')
 
 SELECT*FROM dbo.bankaSehir
 SELECT*FROM dbo.bankaSube
@@ -86,7 +86,7 @@ CREATE PROCEDURE deneme2
 
    execute deneme2
    
-   'Fatih','İpek'
+   'Fatih','Ãpek'
 
 
    --Index Rebuild---
@@ -98,7 +98,7 @@ DECLARE @fillfactor INT
 SET @fillfactor = 30
 DECLARE DatabaseCursor CURSOR FOR
 SELECT name FROM master.dbo.sysdatabases  
-WHERE name  IN ('SAROT_OTEL')  
+WHERE name  IN ('calisan')  
 ORDER BY 1 
 OPEN DatabaseCursor 
 FETCH NEXT FROM DatabaseCursor INTO @Database
